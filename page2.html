@@ -8,36 +8,46 @@
       (плюс $24 в месяц за подписку на софт). Небольшая коробочка крепится к лобовому стеклу машины на место зеркала заднего вида, подсоединяется 
       к бортовой электронной системе, и вуаля — у вас автономный автомобиль.<script language="javascript"> document.write("javascript"); </script>
     </p>
-    <a href="page2.html">Page 2</a>
     <script language="javascript">
       function add(x, y) {
         var z = x + y;
-        alert(x + " + " + y + " = " + z);
+        alert(printAction(x, y, "+") + " = " + z);
       }
       function sub(x, y) {
         var z = x - y;
-        alert(x + " - " + y + " = " + z);
+        alert(printAction(x, y, "-") + " = " + z);
       }
       function mul(x, y) {
         var z = x * y;
-        alert(x + " * " + y + " = " + z);
+        alert(printAction(x, y, "*") + " = " + z);
       }
       function div(x, y) {
-        if (y == 0) {
-          alert("Деление на ноль");
-        }
-        else {
-          var z = x / y;
-          alert(x + " / " + y + " = " + z);
-        }
+        var z = x / y;
+        alert(printAction(x, y, "/") + " = " + z);
+      }
+      function printAction(x, y, op) {
+        return x + " " + op + " " + y; 
+      }
+      var x = Number(prompt("Введите первое число:"));
+      var y = Number(prompt("Введите второе число:"));
+      var op = prompt("Введите + - / или *");
+      if (op == "+") {
+        add(x, y);
+      }
+      else if (op == "-") {
+        sub(x, y); 
+      }
+      else if (op == "*") {
+        mul(x, y);
+      }
+      else if (op == "/") {
+        div(x, y);
+      }
+      else {
+        alert("Офигел?");
       }
     </script>
     <script language="javascript">
-      add(5, 3);
-      sub(5, 3);
-      mul(5, 3);
-      div(5, 3);
-      div(5, 0);
     </script>
 	</body>
 </html>
