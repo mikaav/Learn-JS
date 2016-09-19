@@ -4,7 +4,15 @@
   </head>
   <body>
   <h1>HTML</h1>
-
+    <script language="javascript">
+      function factorial(n) {
+        if (n==1) 
+          return 1;
+        else 
+          return n*factorial(n-1);		
+      }  
+      var num = prompt('Введите число для вычисления факториала');
+      alert(factorial(num));
     </script> 
   </body>
 </html>
