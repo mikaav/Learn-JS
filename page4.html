@@ -4,7 +4,23 @@
 	</head>
 	<body>
     <script language="javascript">
-      
+      function factorial(n) {
+        if  (n < 0) {
+          alert("Офигел?");
+        }
+        else {
+          var f = 1;    
+          for (var i = 2; i <= n; i++) {
+            f = f * i;
+          }
+          return f;    
+        }   
+      }      
+      x = Number(prompt("x = "));    
+      y = factorial(x);   
+      if (y != undefined) {
+        alert(x + "! =" + y);    
+      }
     </script>
 	</body>
 </html>
