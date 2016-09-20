@@ -3,16 +3,29 @@
     <meta http-equiv="Content Type" content="text/html; charset=utf-8">
   </head>
   <body>
-  <h1>HTML</h1>
+    <h1>HTML</h1>
     <script language="javascript">
+      // Рекурсия
       function factorial(n) {
-        if (n==1) 
+        if (n == 1) 
           return 1;
         else 
-          return n*factorial(n-1);		
+          return n * factorial(n - 1);		
       }  
+      // f(5) = 5 * f(4) = 5 * 4 * 3 * 2 * 1
+      // f(4) = 4 * f(3) = 4 * 3 * 2 * 1
+      // f(3) = 3 * f(2) = 3 * 2 * 1
+      // f(2) = 2 * f(1) = 2 * 1
+      // f(1) = 1 (База Base case)
       var num = prompt('Введите число для вычисления факториала');
       alert(factorial(num));
     </script> 
+    <script language="javascript">
+      var x = 0;
+      for (var i = 0; i <= 100; i++) {
+        x = x + i;
+      }
+      alert(x);
+    </script>
   </body>
 </html>
