@@ -1,0 +1,70 @@
+<html>
+	<head>
+    <meta http-equiv="Content Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+    <script language="javascript">
+      var array = new Array();
+      for (var i = 0; i < 5; i++) {
+        array[i] = Number(prompt("Введите число "));
+        document.write(array[i] + " ");
+      }
+      
+      var max = array[0];
+      var k = 0;
+      for (var i = 1; i < 5; i++) {
+        if (max < array[i]) {
+          max = array[i];
+          k = i;
+        }
+      }
+      
+      document.write("<br/>" + max + " " + k);
+      document.write("<br/>");
+      
+      var obmen = array[0];
+      array[0] = max;
+      array[k] = obmen;
+      for (var i = 0; i < 5; i++) {
+        document.write(array[i] + " ");
+      }
+      document.write("<br/>");
+    </script>
+    <script language="javascript">
+      function print(array) {
+        document.write("<br/>");
+        for (var i = 0; i < array.length; i++) {
+          document.write(array[i] + " ");
+        }
+        document.write("<br/>");
+      }
+      var a = new Array();
+      a[0] = 35;
+      a[1] = 25;
+      a[2] = 64;
+      a[3] = 12;
+      a[4] = 6;
+      var b = new Array();
+      // a.push(100);
+      // a.pop();
+      // a.splice(2, 1);
+      // a.splice(2, 0, 100);
+      print(a);
+      document.write("<br/>");
+      var test1 = a[0];
+      for (var i = 1; i < a.length; i++) {
+        if (test1 < a[i]) {
+          test1 = a[i];
+          var j = i;
+        }
+      }
+      a.splice(j, 1);
+      b.push(test1);
+      document.write(test1 + " " + j);
+      print(a);
+      print(b);
+      var test2 = a[0];
+      //for (var i)
+    </script>
+	</body>
+</html>
