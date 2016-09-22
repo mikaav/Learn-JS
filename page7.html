@@ -51,20 +51,93 @@
       // a.splice(2, 0, 100);
       print(a);
       document.write("<br/>");
-      var test1 = a[0];
+      /* var test1 = a[0];
+      var j = 0;
       for (var i = 1; i < a.length; i++) {
         if (test1 < a[i]) {
           test1 = a[i];
-          var j = i;
+          j = i;
         }
       }
       a.splice(j, 1);
       b.push(test1);
-      document.write(test1 + " " + j);
+
       print(a);
       print(b);
+      
       var test2 = a[0];
-      //for (var i)
+      var k = 0;
+      for (var i = 1; i < a.lenght; i++) {
+        if (test2 < a[i]) {
+          test2 = a[i];
+          k = i;
+        }
+      }
+
+      a.splice(k, 1);
+      b.push(test2);
+      print(a);
+      print(b);
+      
+      var test3 = a[0];
+      var m = 0;
+      for (var i = 1; i < a.length; i++) {
+        if (test3 < a[i]) {
+          test3 = a[i];
+          m = i;
+        }
+      }
+
+      a.splice(m, 1);
+      b.push(test3);
+      print(a);
+      print(b);
+      
+      var test4 = a[0];
+      var n = 0;
+      for (var i = 1; i < a.length; i++) {
+        if (test4 < a[i]) {
+          test4 = a[i];
+          n = i;
+        }
+      }
+
+      a.splice(n, 1);
+      b.push(test4);
+      print(a);
+      print(b);
+      
+      var test5 = a[0];
+      var v = 0;
+      for (var i = 1; i < a.length; i++) {
+        if (test5 < a[i]) {
+          test5 = a[i];
+          v = i;
+        }
+      }
+
+      a.splice(v, 1);
+      b.push(test5);
+      print(b);  */
+      
+      var n = a.length;
+      for (var i = 0; i < n; i++) {
+        document.write("Длина Масива " + a.length);
+        var max = a[0];
+        var j = 0;
+        for (var k = 1; k < a.length; k++) {
+          if (max < a[k]) {
+            max = a[k];
+            j = k;
+          }
+        }
+        a.splice(j, 1);
+        b.push(max);
+        print(b);
+        print(a);
+      }
+      
+      
     </script>
 	</body>
 </html>
