@@ -8,11 +8,23 @@
       var x = prompt("Введите текст:");
       document.write(x.toLowerCase());
       
-      var ar = new Array();
-      ar = x;
-      for (i = 0, i < ar.length, i++) {
-        document.write("<br>" + ar);
+      var a = new Array();
+      for (var i = 0; i < x.length; i++) {
+        a[i] = x[i];
       }
+      document.write("<br>");
+      for (var i = 0; i < a.length; i++) {
+        document.write(a[i] + " ");
+      }
+       a.sort(sor);
+      function sor (a1, a2) {
+        if ((a1) > (a2)) return 1;
+        if ((a1) < (a2)) return -1;
+        if ((a1) == (a2)) return 0;
+        document.write(sor);
+      }
+      document.write("<br>" + a.join(' '));
+      document.write(random);
     </script>
 	</body>
 </html>
