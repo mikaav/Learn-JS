@@ -8,7 +8,15 @@
       var a = prompt("Введите адрес сайта: ");
       var x = prompt("Введите ширину окна: ");
       var y = prompt("Введите высоту окна: ");
-      var window1 = window.open("a","dsas","innerWith=x,innerHight=y");   
+      var window1 = window.open(a,"dsas","innerWith=" + x + ",innerHight=" + y);
+            
+      var t = Number(prompt("Введите время: "));
+      var counter = 1;
+      window.setInterval(func, t * 1000);
+      function func() {
+        alert("Прошло " + (counter * t) + " секунд");
+        counter++;
+      }
     </script>
 	</body>
 </html>
