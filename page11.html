@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta http-equiv="Content Type" content="text/html; charset=utf-8">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <img src = "person.jpg" name = "im"> 
+    <img src = "person1.jpg" name = "i"> 
+    <a href = "http://www.learn-js.ru">Home Page</a>
+    
+    <script>
+      document.images.im.width = 300;
+      document.images.im.height = 400;
+      document.images.i.height = 300;
+      document.images.i.width = 200;
+      var id = setInterval(func, 1000, 250, "222");
+      function func(k, z) {
+        var obmen = document.images.im.src;
+        document.images.im.src = document.images.i.src;
+        document.images.i.src = obmen;
+        document.images.im.width = k * Math.random();
+        document.images.im.height = k * Math.random();
+        document.images.i.height = k * Math.random();
+      }
+    </script>
+  </body>
+</html>
