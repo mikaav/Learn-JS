@@ -31,14 +31,25 @@
       document.write("<br>" + "Прошло с 01.01.1970-ого года  " + date.getTime() + " Секунд");
     </script>
     <script>
-      var n = Number(prompt("Введите число max "));
-      var m = Number(prompt("Введите число min "));
-      var l = Number(prompt("Введите число pos.inf "));
-      var k = Number(prompt("Введите число neg.inf "));
-      document.write("<br>" + Number.MAX_VALUE);
-      document.write("<br>" + Number.MIN_VALUE);
-      document.write("<br>" + Number.POSITIVE_INFINITY);
-      document.write("<br>" + Number.NEGATIVE_INFINITY);
+      var n = prompt("Введите число");
+      switch (n) {
+        case "max": {
+          document.write("<br>" + Number.MAX_VALUE);
+          break;
+        } 
+        case "min": {
+          document.write("<br>" + Number.MIN_VALUE);
+          break;
+        } 
+        case "posinf": {
+          document.write("<br>" + Number.POSITIVE_INFINITY);
+          break;
+        } 
+        case "neginf": {
+          document.write("<br>" + Number.NEGATIVE_INFINITY);
+          break;
+        }
+      }
     </script>
 	</body>
 </html>
