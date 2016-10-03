@@ -2,48 +2,50 @@
   <head>
     <meta http-equiv="Content Type" content="text/html; charset=utf-8">
     <title>JavaScript</title>
+    <script language="javascript">
+      function check() {
+        if (document.form1.login.value.length > 3 && document.form1.login.value.length < 32)
+          return 1;
+          else {
+            alert("Логин слишком короткий");
+          }
+          if (document.form1.pass1.value == document.form1.pass2.value){
+            return 1;
+            else {
+              alert("Пароль не совподает");
+            }
+          }
+      }
+    </script>
   </head>
   <body>
-    <form action="request.php" method="post">
+    <form action="request.php" method="post" name="form1">
       <label>Логин:</label>
-      <input type="text" name="name">
+      <input type="text" name="login">
+      <br>
+      <label>E-mail:</lael>
+      <input type="text" name="email">
       <br>
       <label>Пароль:</label>
-      <input type="password" name="pass">
+      <input type="password" name="pass1">
       <br>
       <label>Повторите пароль:</label>
-      <input type="password" name="pass">
+      <input type="password" name="pass2">
       <br>
-      <label>Выберите обычный аккаунт или VIP аккаунт:</label>
-      <input type="radio" name="account" value="econom">Обычный
-      <input type="radio" name="account" value="vip">VIP
+      <label>Выберите пол:</label>
+      <input type="radio" name="gender" value="male">Мужской
+      <input type="radio" name="gender" value="female">Женский
       <br>
-      <label>Выберите любимое число:</label>
-      <select name="numbers">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-      <br>
-      <label>Ваши интересы:</label>
-      <br>
-      <textarea name="message" cols="30" rows="8"></textarea>
-      <br>
-      <label>Согласны с нашими условиями:</label>
+      <label>Согласны или нет с правилами сайта:</label>
       <input type="checkbox" name="allow">
       <br>
-      <input type = "reset" value = "Сбросить">
+      <input type="reset" value="Сбросить">
       <br>
-      <input type = "button" value = "Проверить">
-      <br>
-      <input type="submit" value="Подтвердить">
+      <input type="button" value="Отправить" onClick="check()">
     </form>
+    
+    <script language="javascript">
+      
+    </script>
   </body>
 </html>
