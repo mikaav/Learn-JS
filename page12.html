@@ -4,5 +4,46 @@
     <title>JavaScript</title>
   </head>
   <body>
+    <form action="request.php" method="post">
+      <label>Логин:</label>
+      <input type="text" name="name">
+      <br>
+      <label>Пароль:</label>
+      <input type="password" name="pass">
+      <br>
+      <label>Повторите пароль:</label>
+      <input type="password" name="pass">
+      <br>
+      <label>Выберите обычный аккаунт или VIP аккаунт:</label>
+      <input type="radio" name="account" value="econom">Обычный
+      <input type="radio" name="account" value="vip">VIP
+      <br>
+      <label>Выберите любимое число:</label>
+      <select name="numbers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <br>
+      <label>Ваши интересы:</label>
+      <br>
+      <textarea name="message" cols="30" rows="8"></textarea>
+      <br>
+      <label>Согласны с нашими условиями:</label>
+      <input type="checkbox" name="allow">
+      <br>
+      <input type = "reset" value = "Сбросить">
+      <br>
+      <input type = "button" value = "Проверить">
+      <br>
+      <input type="submit" value="Подтвердить">
+    </form>
   </body>
 </html>
