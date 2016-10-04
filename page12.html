@@ -9,7 +9,7 @@
         if (document.form1.login.value.length > 3 && document.form1.login.value.length < 32) {
           if (document.form1.pass1.value == document.form1.pass2.value) {
             if (document.form1.email.value.indexOf(".") > -1 && document.form1.email.value.indexOf("@") > -1) {
-              if (document.form1.gender.value == male && document.form1.gender.value == female) {
+              if (document.form1.gender.value == male || document.form1.gender.value == female) {
                 document.form1.submit();
               }
               else {
