@@ -4,30 +4,64 @@
     <title>JavaScript</title>
     <script language="javascript">
       function check() {
-        document.write(document.form1.gender.value);
-        document.write(document.form1.allow);
+        // Логин должен быть больше 3 символов и меньше 32
         if (document.form1.login.value.length > 3 && document.form1.login.value.length < 32) {
-          if (document.form1.pass1.value == document.form1.pass2.value) {
-            if (document.form1.email.value.indexOf(".") > -1 && document.form1.email.value.indexOf("@") > -1) {
-              if (document.form1.gender.value == male || document.form1.gender.value == female) {
-                document.form1.submit();
+          // Пароль должен быть больше 3 символов и меньше 32
+          if (document.form1.pass1.value.length > 3 && document.form1.pass1.value.length < 32) {
+            // Пароли должны бать одинаковыми
+            if (document.form1.pass1.value == document.form1.pass2.value) {
+              // E-mail не должен быть пустым
+              if (document.form1.email.value.length != 0) {
+                // E-mail должен содержать точку и @
+                if (document.form1.email.value.indexOf(".") > -1 && document.form1.email.value.indexOf("@") > -1) {
+                  // Пол должен быть обезательно выбран
+                  if (document.form1.gender.value == "male" || document.form1.gender.value == "female") {
+                    // Checkbox должен быть включён
+                    if (document.form1.allow.value == "on") {
+                      document.form1.submit();
+                    }
+                    //если checkbox не включён
+                    else {
+                      alert("Вы не согласились с правилами");
+                    }
+                  }
+                  // если пол не выбран
+                  else {
+                    alert("Выберите пол");
+                  }
               }
+              // Если E-mail не содержит точку и @
               else {
-                alert("Выберите пол");
+                alert("E-mail Заполнен некорректно");
               }
             }
+            // Если E-mail пустой
             else {
-              alert("E-mail Заполнен некорректно");
+              alert("E-mail не должен быть пустым");
+            }
+            }
+            // Если пороль не совподает
+            else {
+              alert("Пароль не совподает");
             }
           }
+          // Если пароль меньше 3 символов
           else {
-            alert("Пароль не совподает");
+            if (document.form1.pass1.value.length <= 3) {
+              alert("Пароль слишком короткий");
+            }
+            // Если пароль больше 32 символов
+            else {
+              alert("Пароль слишком длинный");
+            }
           }
         }
+        // Если логин меньше 3 символов
         else {
           if (document.form1.login.value.length <= 3) {
             alert("Логин слишком короткий");
           }
+          // Если логин больше 32 символов
           else {
             alert("Логин слишком длинный");
           }
@@ -40,7 +74,7 @@
       <label>Логин:</label>
       <input type="text" name="login">
       <br>
-      <label>E-mail:</lael>
+      <label>E-mail:</label>
       <input type="text" name="email">
       <br>
       <label>Пароль:</label>
