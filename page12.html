@@ -12,26 +12,27 @@
             if (document.form1.pass1.value == document.form1.pass2.value) {
               // E-mail не должен быть пустым 
               if (document.form1.email.value.length != 0) {
-                // E-mail должен содержать точку и @
+                // E-mail должен содержать . и @
                 if (document.form1.email.value.indexOf(".") > -1 && document.form1.email.value.indexOf("@") > -1) {
-                  // Пол должен быть обезательно выбран 
+                  // Пол должен быть обязательно выбран 
                   if (document.form1.gender.value == "male" || document.form1.gender.value == "female") {
                     // Checkbox должен быть включён 
                     if (document.form1.allow.value == "on") {
                       document.form1.submit();
                     }
-                    //если checkbox не включён 
+                    // Если checkbox не включён 
                     else {
                       alert("Вы не согласились с правилами");
                     }
                   }
-                  // если пол не выбран 
+                  // Если пол не выбран 
                   else {
                     alert("Выберите пол");
                   }
               }
-              // Если E-mail не содержит точку 
+              // Если E-mail не содержит . или @
               else {
+                // Если E-mail не содержит .
                 if (document.form1.email.value.indexOf(".") > -1) {
                   alert("E-mail должен содержать . ");
                 }
@@ -46,13 +47,14 @@
               alert("E-mail не должен быть пустым");
             }
             }
-            // Если пароль не совподает
+            // Если пароль не совпадает
             else {
-              alert("Пароль не совподает");
+              alert("Пароль не совпадает");
             }
           }
-          // Если пароль меньше 3 символов 
+          // Если пароль меньше 3 символов или больше 32
           else {
+            // Если пароль меньше 3 символов
             if (document.form1.pass1.value.length <= 3) {
               alert("Пароль слишком короткий");
             } 
@@ -62,12 +64,13 @@
             }
           }
         }
-        // Если логин меньше 3 символов 
+        // Если логин меньше 3 символов или больше 32
         else {
+          // Если логин меньше 3 символов
           if (document.form1.login.value.length <= 3) {
             alert("Логин слишком короткий");
           }
-          // Если логин больше 32 символов 
+          // Если логин больше 32 символов
           else {
             alert("Логин слишком длинный");
           }
