@@ -4,38 +4,38 @@
     <title>JavaScript</title>
     <script language="javascript">
       function check() {
-        // Логин должен быть больше 3 символов и меньше 32
+        // Логин должен быть больше 3 символов и меньше 32 
         if (document.form1.login.value.length > 3 && document.form1.login.value.length < 32) {
-          // Пароль должен быть больше 3 символов и меньше 32
+          // Пароль должен быть больше 3 символов и меньше 32 
           if (document.form1.pass1.value.length > 3 && document.form1.pass1.value.length < 32) {
-            // Пароли должны быть одинаковыми
+            // Пароли должны быть одинаковыми 
             if (document.form1.pass1.value == document.form1.pass2.value) {
-              // E-mail не должен быть пустым
+              // E-mail не должен быть пустым 
               if (document.form1.email.value.length != 0) {
                 // E-mail должен содержать точку и @
                 if (document.form1.email.value.indexOf(".") > -1 && document.form1.email.value.indexOf("@") > -1) {
-                  // Пол должен быть обезательно выбран
+                  // Пол должен быть обезательно выбран 
                   if (document.form1.gender.value == "male" || document.form1.gender.value == "female") {
-                    // Checkbox должен быть включён
+                    // Checkbox должен быть включён 
                     if (document.form1.allow.value == "on") {
                       document.form1.submit();
                     }
-                    //если checkbox не включён
+                    //если checkbox не включён 
                     else {
                       alert("Вы не согласились с правилами");
                     }
                   }
-                  // если пол не выбран
+                  // если пол не выбран 
                   else {
                     alert("Выберите пол");
                   }
               }
-              // Если E-mail не содержит точку
+              // Если E-mail не содержит точку 
               else {
                 if (document.form1.email.value.indexOf(".") > -1) {
                   alert("E-mail должен содержать . ");
                 }
-                // Если E-mail не содержит @
+                // Если E-mail не содержит @ 
                 else {
                   alert("E-mail должен содержать @ ");
                 }
@@ -46,28 +46,28 @@
               alert("E-mail не должен быть пустым");
             }
             }
-            // Если пороль не совподает
+            // Если пароль не совподает
             else {
               alert("Пароль не совподает");
             }
           }
-          // Если пароль меньше 3 символов
+          // Если пароль меньше 3 символов 
           else {
             if (document.form1.pass1.value.length <= 3) {
               alert("Пароль слишком короткий");
-            }
-            // Если пароль больше 32 символов
-            else {
+            } 
+            // Если пароль больше 32 символов 
+            else { 
               alert("Пароль слишком длинный");
             }
           }
         }
-        // Если логин меньше 3 символов
+        // Если логин меньше 3 символов 
         else {
           if (document.form1.login.value.length <= 3) {
             alert("Логин слишком короткий");
           }
-          // Если логин больше 32 символов
+          // Если логин больше 32 символов 
           else {
             alert("Логин слишком длинный");
           }
