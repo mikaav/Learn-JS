@@ -29,23 +29,23 @@
                   else {
                     alert("Выберите пол");
                   }
-              }
-              // Если E-mail не содержит . или @
-              else {
-                // Если E-mail не содержит .
-                if (document.form1.email.value.indexOf(".") > -1) {
-                  alert("E-mail должен содержать . ");
                 }
-                // Если E-mail не содержит @ 
+                // Если E-mail не содержит . или @
                 else {
-                  alert("E-mail должен содержать @ ");
+                  // Если E-mail не содержит .
+                  if (document.form1.email.value.indexOf(".") > -1) {
+                    alert("E-mail должен содержать . ");
+                  }
+                  // Если E-mail не содержит @ 
+                  else {
+                    alert("E-mail должен содержать @ ");
+                  }
                 }
               }
-            }
-            // Если E-mail пустой
-            else {
-              alert("E-mail не должен быть пустым");
-            }
+              // Если E-mail пустой
+              else {
+                alert("E-mail не должен быть пустым");
+              }
             }
             // Если пароль не совпадает
             else {
@@ -84,10 +84,12 @@
         // Если логин меньше 3 символов или больше 32
         if (document.form1.login.value.length < 3 || document.form1.login.value.length > 32) {
           valid = false;
+          
           // Если логин меньше 3 символов
           if (document.form1.login.value.length < 3) {
             alert("Логин слишком короткий");
           }
+          
           // Если логин больше 32 символов
           else {
             alert("Логин слишком длинный");
@@ -106,16 +108,19 @@
             alert("Пароль слишком длинный");
           }
         }
+        
         // Пароли должны быть одинаковыми 
         if (document.form1.pass1.value != document.form1.pass2.value) {
           valid = false;
           alert("Пароли должны быть одинаковыми");
         }
+        
         // E-mail не должен быть пустым 
         if (document.form1.email.value.length == 0) {
           valid = false;
           alert("E-mail не должен быть пустым");
         }
+        
         // E-mail должен содержать . и @
         if (document.form1.email.value.indexOf(".") < -1 && document.form1.email.value.indexOf("@") < -1) {
           valid = false;
@@ -128,16 +133,19 @@
             alert("E-mail должен содержать @ ");
           }
         }
+        
         // Пол должен быть обязательно выбран 
         if (document.form1.gender.value != "male" || document.form1.gender.value != "female") {
           valid = false;
           alert("Выберите пол");
         }
+        
         // Checkbox должен быть включён 
         if (document.form1.allow.value != "on") {
           valid = false;
           alert("Вы не согласились с правилами");
         }
+        
         if (valid == true) {
           document.form1.submit();
         }
@@ -167,7 +175,7 @@
       <br>
       <input type="reset" value="Сбросить">
       <br>
-      <input type="button" value="Отправить" onClick="best_check()">
+      <input type="button" value="Отправить" onclick="best_check()">
     </form>
   </body>
 </html>
