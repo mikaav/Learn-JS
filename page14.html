@@ -15,7 +15,18 @@
     <a href="http://www.google.ru" id="secret"></a>
     <br>
     <a href="http://www.mail.ru" onmouseover="setClick()" id="secret1">Mail.ru</a>
-    
+    <br>
+    <form name="form1">
+      <label>Имя</label>
+      <input type="text" name="name" onblur="check()">
+      <br>
+      <label>Фамилия</label>
+      <input type="text" name="firstname" onblur="check()">
+      <br>
+      <label>Логин:</label>
+      <input type="text" name="login" onblur="check()">
+      <label>
+    </form>
     <script language="javascript">
       function show() {
         document.getElementById("secret").innerHTML = "Скачать";
@@ -23,6 +34,18 @@
       function setClick() {
         // location.href = "http://www.mail.ru";
         document.getElementById("secret1").click();
+      }
+      
+      function check() {
+        if (document.form1.name.value.length < 3 || document.form1.name.value.length > 32) {
+        document.write("Имя некорректно");
+        }
+        if (document.form1.firstname.value.length <3 || document.form1.firstname.value.length > 32) {
+          document.write("Фамилия некорректна");
+        }
+        if (document.form1.login.value.length < 3 || document.form1.login.value.length > 32) {
+          document.write("Логин некоректен");
+        }
       }
     </script>
   </body>
