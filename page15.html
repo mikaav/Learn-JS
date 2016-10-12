@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <meta http-equiv="Content Type" content="text/html; charset=utf-8">
+    <title>JavaScript Timer</title>
+  </head>
+  <body>
+    <script language="javascript">
+      function vkontakte() {
+        var start = Number(document.getElementById("number").innerHTML);
+        var end = new Number(start + Math.random() * 50);
+        document.getElementById("number").innerHTML = Math.floor(end);
+        set.timeout(vkontakte, Math.random() * 2000);
+      }
+    </script>
+    
+    <p>Нас Уже: <b id="number">36982</b></p>
+  </body>
+</html>
