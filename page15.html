@@ -4,15 +4,17 @@
     <title>JavaScript Timer</title>
   </head>
   <body>
+    <p>Нас Уже: <b id="number">36982</b></p>
+
     <script language="javascript">
       function vkontakte() {
         var start = Number(document.getElementById("number").innerHTML);
         var end = new Number(start + Math.random() * 50);
+        console.log(end);
         document.getElementById("number").innerHTML = Math.floor(end);
-        set.timeout(vkontakte, Math.random() * 2000);
+        setTimeout(vkontakte, Math.random() * 2000);
       }
+      vkontakte();
     </script>
-    
-    <p>Нас Уже: <b id="number">36982</b></p>
   </body>
 </html>
