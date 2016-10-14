@@ -6,20 +6,39 @@
   <body>
     <p>Нас Уже: <b id="number">36982</b></p>
     <br>
-    <label>Введите число</label>
-    <input type="text" name="kol">
-    <br>
-    <input type="button" value="Start">
+    <form name="form1">
+      <label>Введите число</label>
+      <input type="text" name="kol">
+      <br>
+      <input type="button" value="Start" onclick="count()">
+    </form>
 
     <script language="javascript">
       function vkontakte() {
         var start = Number(document.getElementById("number").innerHTML);
         var end = new Number(start + Math.random() * 50);
-        console.log(end);
         document.getElementById("number").innerHTML = Math.floor(end);
         setTimeout(vkontakte, Math.random() * 2000);
       }
       vkontakte();
+      
+      function count() {
+        if (document.form1.kol.value.length != 0) {
+          console.log(Number(document.form1.kol.value));
+        }
+        else {
+          alert("ERROR 404");
+        }
+      }
+      
+      function blink() {
+        document.body.style.background = "red";
+        setTimeout(blink2,500);
+      }
+      function blink2() {
+        document.body.style.background = "white";
+      }
+      blink();
     </script>
   </body>
 </html>
