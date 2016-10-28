@@ -3,7 +3,7 @@
     <meta http-equiv="Content Type" content="text/html; charset=utf-8">
     <title>JS Timer</title>
   </head>
-  <body>
+  <body style="background-color: white;">
     <p>Нас Уже: <b id="number">36982</b></p>
     <br>
     <form name="form1">
@@ -21,24 +21,32 @@
         setTimeout(vkontakte, Math.random() * 2000);
       }
       vkontakte();
-      
+      var gcounter = 0;
+      var ginterval;
       function count() {
-        if (document.form1.kol.value.length != 0) {
-          console.log(Number(document.form1.kol.value));
+        if (document.form1.kol.value.length != 0 && Number(document.form1.kol.value) > 0) {
+          gcounter = Number(document.form1.kol.value);
+          ginterval = setInterval(blink, 500);
         }
         else {
-          alert("ERROR 404");
+          alert("Число введено неправильно");
         }
       }
       
       function blink() {
-        document.body.style.background = "red";
-        setTimeout(blink2,500);
+        if (gcounter >= 0) {
+          gcounter--;
+        }
+        else {
+          
+        }
+        if (document.body.style.backgroundColor == "white") {
+          document.body.style.backgroundColor = "red";
+        }
+        else {
+          document.body.style.backgroundColor = "white";
+        }
       }
-      function blink2() {
-        document.body.style.background = "white";
-      }
-      blink();
     </script>
   </body>
 </html>
