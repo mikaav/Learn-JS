@@ -21,24 +21,26 @@
         setTimeout(vkontakte, Math.random() * 2000);
       }
       vkontakte();
-      var gcounter = 0;
+      
+      var gcounter;
       var ginterval;
       function count() {
         if (document.form1.kol.value.length != 0 && Number(document.form1.kol.value) > 0) {
-          gcounter = Number(document.form1.kol.value);
+          gcounter = Number(document.form1.kol.value) * 2;
           ginterval = setInterval(blink, 500);
         }
         else {
-          alert("Число введено неправильно");
+          alert("Число введено неправильно!");
         }
       }
       
       function blink() {
-        if (gcounter >= 0) {
+        if (gcounter > 0) {
           gcounter--;
         }
         else {
-          
+          clearInterval(ginterval); 
+          return;
         }
         if (document.body.style.backgroundColor == "white") {
           document.body.style.backgroundColor = "red";
