@@ -5,17 +5,26 @@
   </head>
   <body>
     <script language="javascript">
-      var a = prompt("Введите число от 1 до 3");
-      function check (a) {
+      var a = Number(prompt("Введите число от 1 до 3"));
+      function check() {
         try {
-          if (a > 3) throw "No correct1";
-          if (a < 1) throw "No correct2";
+          if (a > 3) {
+            throw "No correct1";
+          }
+          if (a < 1) {
+            throw "No correct2";
+          }
           alert("ok");
         } catch(e) {
-          if(e=="No correct1") alert("Число больше 3");
-          if(e=="No correct2") alert("Число Меньше 1");
-        }
+            if(e=="No correct1") {
+              alert("Число больше 3");
+            }
+            if(e=="No correct2") {
+              alert("Число Меньше 1");
+            }
+          }
       }
+      check();
     </script>
   </body>
 </html>
