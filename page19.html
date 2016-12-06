@@ -1,0 +1,32 @@
+<html> 
+  <head> 
+    <title>Будильник</title> 
+    <script type = "text/javascript"> 
+      function bud(clock){ 
+      var time = clock; 
+      if(time.search(/^[0-9]{2}:[0-9]{2}:[0-9]{2}$/i) == -1) alert("Ошибка: Время нужно вводить в формате hh:mm:ss"; 
+      var date = new Date(); 
+      var h = date.getHours(); 
+      var m = date.getMinutes(); 
+      var s = date.getSeconds(); 
+      if(h < 10 ) h = "0" + h; 
+      if(m < 10 ) m = "0" + m; 
+      if(s < 10 ) s = "0" + s; 
+
+      var clock = h + ":" + m + ":" + s; 
+      if(time == clock) { 
+      alert("Пора встовать"); 
+      setTimeout(bud,10); 
+      } 
+      } 
+
+    </script> 
+  </head> 
+  <body> 
+    <form name = "form1" > 
+      <label>Введите время</label><br/> 
+      <input type = "text" name = "clock" /> 
+      <input type = "button" value = "Завести" onclick = "bud(document.form1.clock.value);"/> 
+    </form> 
+  </body> 
+</html>
