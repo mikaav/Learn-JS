@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta http-equiv="Content Type" content="text/html; charset=utf-8">
+    <title>Browser version</title>
+  </head>
+  <body>
+    <script language="javascript">
+
+    var ua = navigator.userAgent;
+    var bName = function () {
+      if (ua.search(/MSIE/) > -1) return "ie";
+      if (ua.search(/Trident/) > -1) return "ie11";
+      if (ua.search(/Firefox/) > -1) return "firefox";
+      if (ua.search(/Opera/) > -1) return "opera";
+      if (ua.search(/Chrome/) > -1) return "chrome";
+      if (ua.search(/Safari/) > -1) return "safari";
+    }();
+    var version;
+
+    switch (bName) {
+      case "ie":
+        version = (ua.split("MSIE ")[1]).split(";")[0];
+        break;
+      case "ie11":
+        bName = "ie";
+        version = (ua.split("; rv:")[1]).split(")")[0];
+        break;
+      case "firefox":
+        version = ua.split("Firefox/")[1];
+        break;
+      case "opera":
+        version = ua.split("Version/")[1];
+        break;
+      case "chrome":
+        version = (ua.split("Chrome/")[1]).split(" ")[0];
+        break;
+      case "safari":
+        version = (ua.split("Version/")[1]).split(" ")[0];
+        break;
+    }
+
+    alert("Вы используете Браузер " + bName);
+    </script>
+  </body>
+</html>
